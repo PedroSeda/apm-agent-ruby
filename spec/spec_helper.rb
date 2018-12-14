@@ -58,3 +58,11 @@ def actual_exception
 rescue => e # rubocop:disable Style/RescueStandardError
   e
 end
+
+def darwin?
+  ElasticAPM::Metrics.platform == :darwin
+end
+
+def linux?
+  ElasticAPM::Metrics.platform == :linux
+end
